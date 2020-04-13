@@ -20,7 +20,7 @@ services:
 
   mongo:
     image: mongo
-    container_name: springboot-mongo
+    container_name: mongo
 #    ports:  # for demo/debug purpose only
 #      - 27018:27017
     volumes:
