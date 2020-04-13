@@ -1,7 +1,5 @@
 FROM openjdk:8-alpine
 
-RUN sed -i '/<\/tomcat-users>/ i\<user username="admin" password="agunu" roles="admin-gui,manager-gui"/>' /opt/app/tomcat/conf/tomcat-users.xml
-
 # Required for starting application up.
 RUN apk update && apk add /bin/sh
 
