@@ -11,7 +11,7 @@ services:
     depends_on:
       - mongo
     deploy:
-      replicas: 2
+      replicas: 3
       update_config:
         parallelism: 1
         delay: 20s
