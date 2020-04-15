@@ -24,15 +24,12 @@ services:
 #    ports:  # for demo/debug purpose only
 #      - 27018:27017
     volumes:
-      - data:/data/db
-      - data-bkp:/data/bkp
+      - mongodbbkp:/data/db
     restart: always
     
 volumes:
-  data:
-    #external: true
-  data-bkp:
-    #external: true
+  mongodbbkp:
+    external: true
    
 networks:
   default:
