@@ -25,14 +25,14 @@ services:
 #      - 27018:27017
     volumes:
       - data:/data/db
-      - mongodbbkp:/data/db
+      - data-bkp:/data/bkp
     restart: always
     
 volumes:
   data:
-    external: true
-  mongodbbkp:
-    external: true
+    #external: true
+  data-bkp:
+    #external: true
    
 networks:
   default:
