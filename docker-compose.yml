@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   springboot:
-    image: agunuworld/spring-boot-mongo:latest
+    image: agunuworld/spring-boot-mongo:2
     restart: always
     container_name: springboot
     ports:
@@ -25,16 +25,16 @@ services:
 #      - 27018:27017
     volumes:
       - data:/data/db
-      - data-bkp:/data/bkp
+      - data-bkp:/data/db
     restart: always
     
 volumes:
   data:
-    #external: true
-  data-bkp:
-    #external: true
-    
+    external: true
+  mongoebsbkp:
+    external: true
+   
 networks:
   default:
     external:
-      name: customoverlay
+      name: agununetwork
