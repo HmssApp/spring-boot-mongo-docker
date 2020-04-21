@@ -5,7 +5,6 @@ metadata:
   labels:
     name: javawebapp
     namespace: springboot
-  name: java-controller
 spec:
   replicas: 4
   template:
@@ -15,7 +14,7 @@ spec:
         namespace: springboot
     spec:
       containers:
-      - image: dockerhandson/java-web-app
+      - image: agunuworld/java-web-app
         name: javawebapp
         ports:
         - name: javawebapp
