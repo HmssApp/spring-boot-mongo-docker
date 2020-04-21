@@ -14,7 +14,7 @@ spec:
         namespace: springboot
     spec:
       containers:
-      - image: agunuworld/java-web-app
+      - image: agunuworld/spring-boot-mongo
         name: javawebapp
         ports:
         - name: javawebapp
@@ -31,6 +31,7 @@ spec:
   type: NodePort
   ports:
     - port: 8080
-      targetPort: 8080
+      targetPort: 8080 
+        nodePort: 30039
   selector:
     name: javawebapp
