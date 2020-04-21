@@ -4,13 +4,15 @@ kind: ReplicationController
 metadata:
   labels:
     name: javawebapp
+    namespace: springboot
   name: java-controller
 spec:
-  replicas: 1
+  replicas: 4
   template:
     metadata:
       labels:
         name: javawebapp
+        namespace: springboot
     spec:
       containers:
       - image: dockerhandson/java-web-app
@@ -25,7 +27,7 @@ kind: Service
 metadata:
   labels:
     name: javawebapp
-  name: javawebapp
+    namespace: springboot
 spec:
   type: NodePort
   ports:
